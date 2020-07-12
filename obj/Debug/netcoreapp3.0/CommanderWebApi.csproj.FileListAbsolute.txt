@@ -41,3 +41,10 @@ D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatc
 D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll
+D:\Project\CommanderWebApi\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll

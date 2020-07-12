@@ -3,6 +3,7 @@ using AutoMapper;
 using CommanderWebApi.Data;
 using CommanderWebApi.Dtos;
 using CommanderWebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,7 +22,8 @@ namespace CommanderWebApi.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-
+        
+        [Authorize]
         //GET api/commands
         [HttpGet]
         public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
