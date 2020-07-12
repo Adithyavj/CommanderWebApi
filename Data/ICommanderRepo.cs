@@ -9,6 +9,7 @@ namespace CommanderWebApi.Data
         IEnumerable<Command> GetAllComands();
         Command GetCommandById(int id);
         void CreateCommand(Command cmd);
+        void UpdateCommand(Command cmd);
 
     }
 }

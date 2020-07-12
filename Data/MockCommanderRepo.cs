@@ -31,5 +31,10 @@ namespace CommanderWebApi.Data
         {
             throw new System.NotImplementedException();
         }
+
+        public void UpdateCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
