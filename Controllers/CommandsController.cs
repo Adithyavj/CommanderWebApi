@@ -82,7 +82,7 @@ namespace CommanderWebApi.Controllers
 
             var commandToPatch = _mapper.Map<CommandUpdateDto>(commandModelFromRepo);
             patchDoc.ApplyTo(commandToPatch, ModelState);
-            if (TryValidateModel(commandToPatch))
+            if (!TryValidateModel(commandToPatch))
             {
                 return ValidationProblem(ModelState);
             }
