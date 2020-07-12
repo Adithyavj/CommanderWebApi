@@ -10,6 +10,11 @@ namespace CommanderWebApi.Data
             throw new System.NotImplementedException();
         }
 
+        public void DeleteCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllComands()
         {
             var commands = new List<Command>
