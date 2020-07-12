@@ -22,7 +22,7 @@ namespace CommanderWebApi.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        
+
         [Authorize]
         //GET api/commands
         [HttpGet]
