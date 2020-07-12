@@ -3,6 +3,7 @@ using AutoMapper;
 using CommanderWebApi.Data;
 using CommanderWebApi.Dtos;
 using CommanderWebApi.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommanderWebApi.Controllers
@@ -63,6 +64,29 @@ namespace CommanderWebApi.Controllers
             }
             _mapper.Map(commandupdateDto, commandModelFromRepo);
 
+            _repository.UpdateCommand(commandModelFromRepo);
+            _repository.SaveChanges();
+
+            return NoContent();
+        }
+
+        //PATCH api/commands/{id}
+        [HttpPatch("{id}")]
+        public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<CommandUpdateDto> patchDoc)
+        {
+            var commandModelFromRepo = _repository.GetCommandById(id);
+            if (commandModelFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            var commandToPatch = _mapper.Map<CommandUpdateDto>(commandModelFromRepo);
+            patchDoc.ApplyTo(commandToPatch, ModelState);
+            if (TryValidateModel(commandToPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+            _mapper.Map(commandToPatch, commandModelFromRepo);
             _repository.UpdateCommand(commandModelFromRepo);
             _repository.SaveChanges();
 
